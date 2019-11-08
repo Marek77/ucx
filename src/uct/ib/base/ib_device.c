@@ -69,6 +69,36 @@ static ucs_stats_class_t uct_ib_device_stats_class = {
 static uct_ib_device_spec_t uct_ib_builtin_device_specs[] = {
   {0x02c9, 4099, "ConnectX-3",
    UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX4_PRM, 10},
+  /* Bull B510 ConnectX-3 */
+  {0x119f, 0x1b33, "ConnectX-3",
+   UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX4_PRM, 10},
+  /* Bull B515 ConnectX-3 */
+  {0x119f, 0x1b73, "ConnectX-3",
+   UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX4_PRM, 10},
+  /* Bull B700 ConnectX-3 2-port L */
+  {0x119f, 0x1b40, "ConnectX-3",
+   UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX4_PRM, 10},
+  /* Bull B700 ConnectX-3 1-port SL */
+  {0x119f, 0x1b41, "ConnectX-3",
+   UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX4_PRM, 10},
+  /* Bull B700 ConnectX-3 2-port H */
+  {0x119f, 0x1b42, "ConnectX-3",
+   UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX4_PRM, 10},
+  /* Bull B700 ConnectX-3 1-port SH */
+  {0x119f, 0x1b43, "ConnectX-3",
+   UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX4_PRM, 10},
+  /* Bull B715 ConnectX-3 2-port L */
+  {0x119f, 0x1b60, "ConnectX-3",
+   UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX4_PRM, 10},
+  /* Bull B715 ConnectX-3 1-port SL */
+  {0x119f, 0x1b61, "ConnectX-3",
+   UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX4_PRM, 10},
+  /* Bull B715 ConnectX-3 2-port H */
+  {0x119f, 0x1b62, "ConnectX-3",
+   UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX4_PRM, 10},
+  /* Bull B715 ConnectX-3 1-port SH */
+  {0x119f, 0x1b63, "ConnectX-3",
+   UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX4_PRM, 10},
   {0x02c9, 4103, "ConnectX-3 Pro",
    UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX4_PRM, 11},
   {0x02c9, 4113, "Connect-IB",
