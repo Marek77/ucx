@@ -69,6 +69,9 @@ static ucs_stats_class_t uct_ib_device_stats_class = {
 static uct_ib_device_spec_t uct_ib_builtin_device_specs[] = {
   {0x02c9, 4099, "ConnectX-3",
    UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX4_PRM, 10},
+  /* Bull any ConnectX-3 incorrectly presented with Mellanox device_id */
+  {0x119f, 4099, "ConnectX-3",
+   UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX4_PRM, 10},
   /* Bull B510 ConnectX-3 */
   {0x119f, 0x1b33, "ConnectX-3",
    UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX4_PRM, 10},
@@ -104,6 +107,10 @@ static uct_ib_device_spec_t uct_ib_builtin_device_specs[] = {
   {0x02c9, 4113, "Connect-IB",
    UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX5_PRM |
    UCT_IB_DEVICE_FLAG_DC_V1, 20},
+  /* Bull any Connect-IB incorrectly presented with Mellanox device_id */
+  {0x119f, 4113, "Connect-IB",
+   UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX5_PRM |
+   UCT_IB_DEVICE_FLAG_DC_V1, 20},
   /* Bull Inca FDR 1 port */
   {0x119f, 0x1b83, "Connect-IB",
    UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX5_PRM |
@@ -116,6 +123,14 @@ static uct_ib_device_spec_t uct_ib_builtin_device_specs[] = {
   {0x119f, 0x1b94, "Connect-IB",
    UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX5_PRM |
    UCT_IB_DEVICE_FLAG_DC_V1, 20},
+  /* Bull any ConnectX-4 (4115) incorrectly presented with Mellanox device_id */
+  {0x119f, 4115, "ConnectX-4",
+   UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX5_PRM |
+   UCT_IB_DEVICE_FLAG_DC_V1, 30},
+  /* Bull any ConnectX-4 (4116) incorrectly presented with Mellanox device_id */
+  {0x119f, 4116, "ConnectX-4",
+   UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX5_PRM |
+   UCT_IB_DEVICE_FLAG_DC_V1, 30},
   /* Bull Newsca HDR 1 port */
   {0x119f, 0x1bb4, "ConnectX-4",
    UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX5_PRM |
@@ -156,6 +171,14 @@ static uct_ib_device_spec_t uct_ib_builtin_device_specs[] = {
    UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX5_PRM |
    UCT_IB_DEVICE_FLAG_DC_V2, 50},
   {0x02c9, 4124, "ConnectX-6 VF",
+   UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX5_PRM |
+   UCT_IB_DEVICE_FLAG_DC_V2, 50},
+  /* Bull any ConnectX-6 (4123) incorrectly presented with Mellanox device_id */
+  {0x119f, 4123, "ConnectX-6",
+   UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX5_PRM |
+   UCT_IB_DEVICE_FLAG_DC_V2, 50},
+  /* Bull any ConnectX-6 (4124) incorrectly presented with Mellanox device_id */
+  {0x119f, 4124, "ConnectX-6",
    UCT_IB_DEVICE_FLAG_MELLANOX | UCT_IB_DEVICE_FLAG_MLX5_PRM |
    UCT_IB_DEVICE_FLAG_DC_V2, 50},
   /* Bull Sequana HDR 1 port */
